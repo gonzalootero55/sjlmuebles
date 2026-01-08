@@ -111,26 +111,18 @@
   box-sizing: border-box;
 }
 
-/* --- AJUSTE PARA CELULARES --- */
 @media (max-width: 600px) {
   .header-container {
-    padding: 0 15px; /* Reducimos un poco el margen externo para ganar espacio interno */
+    /* En celulares reducimos un poco el aire lateral para que entre todo */
+    padding: 0 15px; 
   }
 
-  .logo-container {
-    /* Si el logo tiene un texto muy largo, lo achicamos un poco */
-    transform: scale(0.85); 
-    transform-origin: left center;
+  .brand-name {
+    font-size: 1.2rem;
   }
 
   .nav-links {
-    display: flex;
-    gap: 15px; /* Forzamos una separación mínima entre Inicio y Catálogo */
-  }
-
-  .nav-links a {
-    font-size: 0.9rem; /* Achicamos apenas la letra para que no choque */
-    letter-spacing: 0.5px;
+    gap: 25px;
   }
 }
 
@@ -141,6 +133,40 @@
   
   .nav-links {
     gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Reducimos el contenedor del logo */
+  .logo-container {
+    transform: scale(0.8); /* Lo achicamos un 20% */
+    transform-origin: left center;
+  }
+
+  /* Si tenés el texto por separado, achicamos la fuente */
+  .brand-name {
+    font-size: 1.5rem !important; /* Forzamos un tamaño más discreto */
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-banner h1 {
+    font-size: 3rem !important; /* Bajamos de 2.5 o 3 a 2.2 */
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+
+  .hero-banner p {
+    font-size: 1rem !important;
+    padding: 0 20px;
+    margin-bottom: 25px;
+  }
+
+  /* Achicamos un poco el botón "Ver Catálogo" para que no sea gigante */
+  .hero-banner .btn-principal {
+    padding: 12px 25px;
+    font-size: 0.9rem;
   }
 }
 
