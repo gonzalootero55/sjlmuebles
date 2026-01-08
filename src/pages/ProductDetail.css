@@ -1,0 +1,147 @@
+/* === CONTENEDOR GENERAL === */
+.product-detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+  overflow-x: hidden; /* evita scroll horizontal */
+}
+
+/* === IMAGEN === */
+.image-section img {
+  width: 100%;
+  max-width: 500px; /* evita que crezca de más */
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+/* === INFO === */
+.info-section h2 {
+  font-family: 'Bebas Neue', sans-serif; /* Consistencia con la Home */
+  font-size: 3rem; 
+  letter-spacing: 2px;
+  color: #1A1A1A;
+  margin-bottom: 5px;
+}
+
+.price {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.8rem;
+  font-weight: normal;
+  color: #B7410E; /* Cambiamos el amarillo por tu naranja industrial */
+  margin-bottom: 25px;
+  display: block;
+}
+
+/* === FORMULARIO === */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase; /* Estilo ficha técnica */
+  letter-spacing: 1px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+input,
+textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;        /* ⭐ CLAVE para evitar overflow en móviles */
+  box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+}
+
+.textarea-label {
+  grid-column: span 2;
+}
+
+/* === BOTÓN WHATSAPP === */
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px; /* Espacio para el icono */
+  
+  margin-top: 30px;
+  width: 100%;
+  
+  /* TAMAÑO Y AIRE */
+  padding: 20px; /* Mucho más alto */
+  font-size: 1.3rem; /* Letras grandes */
+  
+  /* ESTILO VISUAL */
+  background-color: #000000; /* Negro puro */
+  color: #ffffff; /* Blanco brillante */
+  border: 2px solid #000000;
+  border-radius: 0px; /* Manteniendo lo industrial */
+  
+  /* FUENTE */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800; /* Extra negrita */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+
+.whatsapp-btn:hover {
+  background-color: #25d366; /* El verde clásico de WhatsApp */
+  border-color: #25d366;
+  transform: scale(1.02); /* Crece un poquito al tocarlo */
+  box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .product-detail-container {
+    grid-template-columns: 1fr;
+    padding: 20px;     /* ⭐ reduce padding para móviles */
+  }
+
+  .image-section img {
+  border-radius: 0px; /* Recto */
+  box-shadow: 15px 15px 0px #f0f0f0; /* Sombra sólida industrial */
+}
+
+  .form-grid {
+    grid-template-columns: 1fr; /* ⭐ una sola columna en celular */
+  }
+
+  .textarea-label {
+    grid-column: span 1; /* se adapta */
+  }
+}
+
+@media (max-width: 500px) {
+  .product-detail-container {
+    padding: 12px; /* ⭐ aún más chico */
+  }
+
+  .info-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .price {
+    font-size: 1.3rem;
+  }
+}

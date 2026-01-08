@@ -1,0 +1,72 @@
+/* ==== HEADER GENERAL ==== */
+.main-header {
+  width: 100%;
+  background-color: #111;      /* Negro industrial */
+  color: #fff;
+  padding: 15px 40px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #333;   /* Línea industrial */
+}
+
+/* ==== LOGO ==== */
+.logo a {
+  color: #fff;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.logo a:hover {
+  color: #ffbf00;   /* Amarillo industrial */
+}
+
+/* ==== MENÚ DE NAVEGACIÓN ==== */
+.nav-menu {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: #ddd;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.nav-menu a:hover {
+  color: #ffbf00;
+  transform: scale(1.05);
+}
+
+/* === CARRITO (resaltar número) === */
+.nav-menu a:last-child {
+  font-weight: bold;
+}
+
+/* ==== RESPONSIVE ==== */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 15px 20px;
+  }
+
+  .logo a {
+    font-size: 1.4rem;
+  }
+
+  .nav-menu {
+    gap: 15px;
+  }
+
+  .nav-menu a {
+    font-size: 1rem;
+  }
+}

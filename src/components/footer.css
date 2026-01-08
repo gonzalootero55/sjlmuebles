@@ -1,0 +1,13 @@
+.main-footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+
+  display: flex;
+  justify-content: center;   /* Centra horizontal */
+  align-items: center;       /* Centra vertical */
+}
+
+.footer-content {
+  text-align: center;         /* Centra el texto dentro del div */
+}

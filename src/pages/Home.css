@@ -1,0 +1,104 @@
+.home-page {
+  width: 100%;
+}
+
+.hero-banner {
+  background-image: url('/src/images/desk2.jpg'); /* tu banner */
+  background-size: cover;
+  background-position: center;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  height: 70vh;
+}
+
+.hero-banner h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary {
+  background-color: #ffbf00;
+  padding: 12px 24px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.home-page {
+  width: 100%;
+}
+
+.hero-banner {
+  /* Gradiente oscuro + imagen para que el texto resalte */
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/src/images/desk2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Efecto Parallax: la imagen se queda quieta al scrollear */
+  height: 85vh; /* Un poco más alta para mayor impacto */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-banner h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem; /* Más grande y potente */
+  letter-spacing: 4px;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease-out; /* Animación de entrada */
+}
+
+.hero-banner p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  margin-bottom: 2.5rem;
+  max-width: 600px;
+  animation: fadeInUp 1.2s ease-out;
+}
+
+/* --- Botón con efecto de Pulso Naranja --- */
+.btn-primary {
+  background-color: #B7410E; /* Naranja industrial */
+  padding: 15px 35px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0px; /* Bordes rectos = más industrial */
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 0 rgba(183, 65, 14, 0.7);
+  animation: pulse-orange 2s infinite;
+}
+
+.btn-primary:hover {
+  background-color: #ff6600;
+  transform: translateY(-3px);
+}
+
+/* --- Animaciones --- */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-orange {
+  0% { box-shadow: 0 0 0 0 rgba(183, 65, 14, 0.7); }
+  70% { box-shadow: 0 0 0 15px rgba(183, 65, 14, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(183, 65, 14, 0); }
+}
