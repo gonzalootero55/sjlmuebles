@@ -101,6 +101,29 @@
   padding: 0 30px;
 }
 
+/* --- AJUSTE PARA CELULARES --- */
+@media (max-width: 600px) {
+  .header-container {
+    padding: 0 15px; /* Reducimos un poco el margen externo para ganar espacio interno */
+  }
+
+  .logo-container {
+    /* Si el logo tiene un texto muy largo, lo achicamos un poco */
+    transform: scale(0.85); 
+    transform-origin: left center;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 15px; /* Forzamos una separación mínima entre Inicio y Catálogo */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* Achicamos apenas la letra para que no choque */
+    letter-spacing: 0.5px;
+  }
+}
+
 /* EFECTO NARANJA AL LOGO */
 .logo-group:hover .header-icon {
   transform: scale(1.1);
