@@ -124,6 +124,16 @@
   }
 }
 
+@media (max-width: 400px) {
+  .brand-name {
+    font-size: 1.2rem; /* Achicamos el nombre de la marca solo en pantallas muy chicas */
+  }
+  
+  .nav-links {
+    gap: 10px;
+  }
+}
+
 /* EFECTO NARANJA AL LOGO */
 .logo-group:hover .header-icon {
   transform: scale(1.1);
