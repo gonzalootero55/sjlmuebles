@@ -373,3 +373,84 @@
 .main-footer strong {
   color: #B7410E; /* Tu naranja de marca en el nombre */
 }
+
+.proyectos-section {
+  padding: 80px 40px;
+  background-color: #ffffff;
+}
+
+.section-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 2px;
+  color: #1a1a1a;
+}
+
+.proyectos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 60px; /* Espacio entre cada proyecto verticalmente */
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.proyecto-card {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr; /* La imagen es más ancha que el texto */
+  align-items: center;
+  gap: 40px;
+}
+
+/* Invertir el orden en cada proyecto par para que no sea monótono */
+.proyecto-card:nth-child(even) {
+  direction: rtl; /* Empuja la imagen a la derecha */
+}
+.proyecto-card:nth-child(even) .proyecto-info {
+  direction: ltr; /* Mantiene el texto leyendo de izquierda a derecha */
+}
+
+.proyecto-image img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-left: 8px solid #B7410E; /* Detalle naranja industrial */
+}
+
+.proyecto-info h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.proyecto-info p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* --- RESPONSIVE PARA CELULAR --- */
+@media (max-width: 768px) {
+  .proyectos-section {
+    padding: 40px 20px;
+  }
+
+  .proyecto-card, .proyecto-card:nth-child(even) {
+    grid-template-columns: 1fr; /* Una sola columna en el celu */
+    direction: ltr;
+    gap: 20px;
+  }
+
+  .proyecto-image img {
+    height: 300px;
+    border-left: none;
+    border-top: 6px solid #B7410E; /* El borde pasa arriba en el celu */
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+  }
+}
