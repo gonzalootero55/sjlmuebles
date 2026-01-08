@@ -93,12 +93,22 @@
 }
 .header-container {
   display: flex;
-  justify-content: space-between; /* Empuja el logo a la izq y links a la der */
+  /* Esto empuja los elementos a los bordes exactos */
+  justify-content: space-between; 
   align-items: center;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 30px;
+  
+  /* ELIMINAMOS el max-width y el margin auto para que ocupe todo el ancho */
+  width: 100%; 
+  
+  /* Ajustamos el padding para que no toquen el borde físico del monitor, 
+     pero que estén bien lejos uno del otro */
+  padding: 0 40px; 
+  
+  /* Altura fija para que sea consistente */
+  height: 80px; 
+  
+  /* Aseguramos que el contenido no se desborde */
+  box-sizing: border-box;
 }
 
 /* --- AJUSTE PARA CELULARES --- */
